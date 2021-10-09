@@ -1,0 +1,81 @@
+/* Typography */
+$big-title: 55px;
+$title: 42px;
+$small-title: 32px;
+$body-size: 16px;
+$small: 14px;
+
+/* COLORS */
+/* PRIMARY */
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+
+/* SECONDARY */
+$dark-grayish-blue: hsl(227, 12%, 61%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$very-pale-gray: hsl(0, 0%, 98%);
+
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+
+body,
+html {
+  font-family: "Be Vietnam";
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  background-image: url("../img/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: 740px -200px;
+  width: 100%;
+  min-height: 180vh;
+
+  &2 {
+    background-position: -500px 95vh;
+  }
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+button {
+  font-family: "Be Vietnam";
+
+  &.primary-button {
+    color: $very-pale-red;
+    background-color: $bright-red;
+
+    font-weight: 500;
+
+    border: 0;
+    border-radius: 20px;
+
+    padding: 10px 30px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.button-shadow {
+      box-shadow: 0 6px 5px -2px $dark-grayish-blue;
+    }
+
+    &:hover {
+      //opacity: 0.75;
+      background-color: rgba(255, 88, 46, 0.7);
+    }
+  }
+
+  &.reverse {
+    color: $bright-red;
+    background-color: #fff;
+  }
+}

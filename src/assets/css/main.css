@@ -1,0 +1,301 @@
+/* Typography */
+/* COLORS */
+/* PRIMARY */
+/* SECONDARY */
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+body,
+html {
+  font-family: "Be Vietnam";
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  background-image: url("../img/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: 740px -200px;
+  width: 100%;
+  min-height: 180vh;
+}
+.bg2 {
+  background-position: -500px 95vh;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+button {
+  font-family: "Be Vietnam";
+}
+button.primary-button {
+  color: #ffefeb;
+  background-color: #f25f3a;
+  font-weight: 500;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button.primary-button.button-shadow {
+  box-shadow: 0 6px 5px -2px #9095a7;
+}
+button.primary-button:hover {
+  background-color: rgba(255, 88, 46, 0.7);
+}
+button.reverse {
+  color: #f25f3a;
+  background-color: #fff;
+}
+
+#home {
+  padding: 50px 0 0 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container .intro {
+  margin-top: 55px;
+}
+.container .intro h1 {
+  color: #242d52;
+  font-size: 55px;
+  line-height: 65px;
+  margin: 0;
+}
+.container .intro h2 {
+  color: #242d52;
+  font-size: 42px;
+  line-height: 52px;
+  margin: 0;
+}
+.container .intro p {
+  width: 325px;
+  color: #9095a7;
+  margin: 45px 0;
+}
+
+#manage {
+  margin-top: 75px;
+}
+#manage .intro {
+  margin-top: 0;
+}
+#manage .features {
+  display: flex;
+  flex-direction: column;
+}
+#manage .feature {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 600px;
+  margin: 0 0 35px 0;
+}
+#manage .feature .head .label {
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #f25f3a;
+  border-radius: 20px;
+  padding: 10px 25px;
+}
+#manage .feature .head h3 {
+  display: none;
+  color: #242d52;
+  margin: 0 10px;
+}
+#manage .feature .about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 0 0 20px;
+}
+#manage .feature .about h3 {
+  color: #242d52;
+  margin: 5px 0;
+}
+#manage .feature .about p {
+  color: #9095a7;
+}
+
+#client {
+  margin: 55px 0 0 0;
+}
+#client h2 {
+  width: 100%;
+  color: #242d52;
+  text-align: center;
+  font-size: 42px;
+}
+#client .clients {
+  display: flex;
+  margin: 125px 0 55px 0;
+  overflow: visible;
+}
+#client .clients .card {
+  position: relative;
+  width: 420px;
+  text-align: center;
+  background-color: #fafafa;
+}
+#client .clients .card img {
+  position: absolute;
+  top: -40px;
+  left: 43%;
+  width: 80px;
+  border-radius: 100%;
+}
+#client .clients .card .body {
+  padding-bottom: 20px;
+}
+#client .clients .card .body h3 {
+  color: #242d52;
+  padding: 25px 0 0 0;
+  margin: 35px 0 5px 0;
+}
+#client .clients .card .body p {
+  color: #9095a7;
+  padding: 5px 70px;
+}
+#client .get-started {
+  width: 100%;
+  text-align: center;
+}
+
+#brand {
+  width: 100%;
+  background-color: #f25f3a;
+  background-image: url("../img/bg-simplify-section-desktop.svg");
+  margin: 55px 0 0 0;
+  padding: 25px 0;
+}
+#brand .container {
+  align-items: center;
+}
+#brand .container h2 {
+  color: #fff;
+  font-size: 42px;
+  width: 520px;
+}
+#brand .container button {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+  #home .container {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  #home .container .intro {
+    text-align: center;
+  }
+  #home .container .intro h1 {
+    font-size: 42px;
+    line-height: 52px;
+  }
+  #home .container .intro p {
+    width: 85%;
+    text-align: center;
+    margin: 10px auto 25px auto;
+  }
+  #home .container .images img {
+    width: 360px;
+  }
+
+  #manage .container {
+    width: 100%;
+    flex-direction: column;
+    clear: both;
+  }
+  #manage .container .intro h2,
+#manage .container .intro p {
+    text-align: center;
+  }
+  #manage .container .intro p {
+    margin: 15px auto 30px auto;
+  }
+  #manage .container h2 {
+    font-size: 32px;
+    padding: 0 15px;
+  }
+  #manage .container .features {
+    margin: 0 0 0 15px;
+  }
+  #manage .container .features .feature {
+    display: block;
+    width: 100%;
+  }
+  #manage .container .features .feature .head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #ffefeb;
+  }
+  #manage .container .features .feature .head h3 {
+    display: block;
+    font-size: 16px;
+  }
+  #manage .container .features .feature .about {
+    margin: 0;
+  }
+  #manage .container .features .feature .about h3 {
+    display: none;
+  }
+  #manage .container .features .feature .about p {
+    font-size: 14px;
+  }
+
+  #client {
+    width: 100%;
+  }
+  #client h2 {
+    font-size: 32px;
+  }
+  #client .clients .card img {
+    left: 36% !important;
+  }
+  #client .clients .card .body p {
+    padding: 5px 25px;
+  }
+  #client .clients h2 {
+    font-size: 32px;
+  }
+  #client .swiper-pagination {
+    bottom: -30px;
+  }
+  #client .swiper-pagination-bullet {
+    background: #fafafa;
+    border: 1px solid #f25f3a;
+    opacity: 1;
+  }
+  #client .swiper-pagination-bullet-active {
+    background: #f25f3a;
+  }
+
+  #brand .container {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  #brand .container h2 {
+    width: 90%;
+    font-size: 42px;
+    margin: 0;
+  }
+  #brand .container button {
+    margin: 35px 0 55px 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

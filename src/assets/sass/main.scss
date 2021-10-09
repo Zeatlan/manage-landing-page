@@ -1,0 +1,306 @@
+@import "skeleton";
+
+#home {
+  padding: 50px 0 0 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .intro {
+    margin-top: 55px;
+
+    h1 {
+      color: $dark-blue;
+      font-size: $big-title;
+      line-height: $big-title + 10;
+      margin: 0;
+    }
+
+    h2 {
+      color: $dark-blue;
+      font-size: $title;
+      line-height: $title + 10;
+      margin: 0;
+    }
+
+    p {
+      width: 325px;
+      color: $dark-grayish-blue;
+
+      margin: 45px 0;
+    }
+  }
+}
+
+#manage {
+  margin-top: 75px;
+
+  .intro {
+    margin-top: 0;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    width: 600px;
+
+    margin: 0 0 35px 0;
+
+    .head {
+      .label {
+        line-height: 20px;
+        font-weight: 700;
+        color: #fff;
+        background-color: $bright-red;
+        border-radius: 20px;
+        padding: 10px 25px;
+      }
+
+      h3 {
+        display: none;
+        color: $dark-blue;
+        margin: 0 10px;
+      }
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 0 0 20px;
+
+      h3 {
+        color: $dark-blue;
+        margin: 5px 0;
+      }
+
+      p {
+        color: $dark-grayish-blue;
+      }
+    }
+  }
+}
+
+#client {
+  margin: 55px 0 0 0;
+
+  h2 {
+    width: 100%;
+    color: $dark-blue;
+    text-align: center;
+    font-size: $title;
+  }
+  .clients {
+    display: flex;
+    margin: 125px 0 55px 0;
+    overflow: visible;
+
+    .card {
+      position: relative;
+      width: 420px;
+      text-align: center;
+      background-color: $very-pale-gray;
+
+      img {
+        position: absolute;
+        top: -40px;
+        left: 43%;
+        width: 80px;
+        border-radius: 100%;
+      }
+      .body {
+        padding-bottom: 20px;
+        h3 {
+          color: $dark-blue;
+          padding: 25px 0 0 0;
+          margin: 35px 0 5px 0;
+        }
+
+        p {
+          color: $dark-grayish-blue;
+          padding: 5px 70px;
+        }
+      }
+    }
+  }
+
+  .get-started {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#brand {
+  width: 100%;
+  background-color: $bright-red;
+
+  background-image: url("../img/bg-simplify-section-desktop.svg");
+
+  margin: 55px 0 0 0;
+  padding: 25px 0;
+
+  .container {
+    align-items: center;
+
+    h2 {
+      color: #fff;
+      font-size: $title;
+      width: 520px;
+    }
+
+    button {
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #home {
+    .container {
+      width: 100%;
+      flex-direction: column-reverse;
+
+      .intro {
+        text-align: center;
+
+        h1 {
+          font-size: $title;
+          line-height: $title + 10;
+        }
+
+        p {
+          width: 85%;
+          text-align: center;
+          margin: 10px auto 25px auto;
+        }
+      }
+
+      .images img {
+        width: 360px;
+      }
+    }
+  }
+
+  #manage {
+    .container {
+      width: 100%;
+      flex-direction: column;
+      clear: both;
+
+      .intro {
+        h2,
+        p {
+          text-align: center;
+        }
+        p {
+          margin: 15px auto 30px auto;
+        }
+      }
+
+      h2 {
+        font-size: $small-title;
+        padding: 0 15px;
+      }
+
+      .features {
+        margin: 0 0 0 15px;
+
+        .feature {
+          display: block;
+          width: 100%;
+
+          .head {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background: $very-pale-red;
+
+            h3 {
+              display: block;
+              font-size: $body-size;
+            }
+          }
+
+          .about {
+            margin: 0;
+
+            h3 {
+              display: none;
+            }
+
+            p {
+              font-size: $small;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #client {
+    width: 100%;
+
+    h2 {
+      font-size: $small-title;
+    }
+    .clients {
+      .card {
+        img {
+          left: 36% !important;
+        }
+
+        .body {
+          p {
+            padding: 5px 25px;
+          }
+        }
+      }
+
+      h2 {
+        font-size: $small-title;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: -30px;
+
+      &-bullet {
+        background: $very-pale-gray;
+        border: 1px solid $bright-red;
+        opacity: 1;
+
+        &-active {
+          background: $bright-red;
+        }
+      }
+    }
+  }
+
+  #brand {
+    .container {
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+
+      h2 {
+        width: 90%;
+        font-size: $title;
+        margin: 0;
+      }
+
+      button {
+        margin: 35px 0 55px 0;
+      }
+    }
+  }
+}

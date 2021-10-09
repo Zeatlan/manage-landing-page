@@ -1,0 +1,163 @@
+@import "skeleton";
+
+$icons: "facebook", "instagram", "twitter", "youtube", "pinterest";
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  color: $dark-grayish-blue;
+  font-size: $small;
+  background-color: $very-dark-blue;
+  padding-top: 4em;
+  padding-bottom: 3em;
+
+  .menu-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+
+    &-right {
+      text-align: right;
+      justify-content: space-between;
+    }
+
+    .social {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        @each $icon in $icons {
+          &-#{$icon} {
+            background: url("../img/icon-"+$icon+".svg") no-repeat center;
+
+            &:hover {
+              filter: invert(66%)
+                sepia(56%)
+                saturate(6767%)
+                hue-rotate(340deg)
+                brightness(100%)
+                contrast(91%);
+            }
+          }
+        }
+      }
+
+      span {
+        &:hover path {
+          stroke: $bright-red;
+          fill: $bright-red;
+        }
+      }
+    }
+
+    a {
+      color: $very-pale-gray;
+      text-decoration: none;
+      margin-bottom: 15px;
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $bright-red;
+      }
+    }
+
+    .form {
+      display: flex;
+
+      input {
+        border: 0;
+        border-radius: 110px;
+
+        padding: 15px 20px;
+        margin: 0 10px 0 0;
+
+        &::placeholder {
+          color: $dark-grayish-blue;
+        }
+      }
+
+      button {
+        padding: 15px 25px;
+        border-radius: 110px;
+      }
+    }
+  }
+
+  p.copyright-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    position: relative;
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+
+      .menu-footer {
+        width: 100%;
+        margin-bottom: 75px;
+        justify-content: space-around;
+      }
+
+      .col {
+        &-right:first-of-type {
+          flex-direction: column-reverse;
+          margin: 0 auto 55px auto;
+        }
+
+        .social {
+          .icon {
+            width: 62px;
+            height: 62px;
+
+            @each $icon in $icons {
+              &-#{$icon} {
+                transform: scale(1.5);
+              }
+            }
+          }
+        }
+
+        img {
+          width: 192px;
+          margin: 45px auto 15px auto;
+        }
+
+        .form {
+          margin: 0 auto;
+
+          button {
+            padding: 15px 35px;
+          }
+        }
+
+        p.copyright-desktop {
+          display: none;
+        }
+      }
+    }
+
+    p.copyright-mobile {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# m-landing-page
+# Manage Landing Page
 
 ## Project setup
 ```
